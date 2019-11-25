@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 # react-weather
-Projekt zaliczeniowy wykorzystujący React
+Projekt zaliczeniowy z wykorzystaniem React
 =======
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
