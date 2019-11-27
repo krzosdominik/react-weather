@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { thisExpression } from '@babel/types';
 
 class SearchForm extends Component {
   state = {
@@ -38,37 +37,35 @@ class SearchForm extends Component {
   render() {
     return (
       <>
-        <form onSubmit={this.onFormSubmit}>
-          <label>
-            Podaj nazwę miasta
-            <input
-              type="text"
-              name="city"
-              value={this.state.city}
-              placeholder="Warszawa"
-              onChange={this.onInputChange}
-              maxLength="15"
-            />
-          </label>
-          <label>
-            Podaj kod kraju
-            <input
-              type="text"
-              name="code"
-              value={this.state.code}
-              placeholder="PL"
-              onChange={this.onInputChange}
-              maxLength="2"
-            />
-          </label>
-          <button type="submit">Pobierz dane</button>
+        <form onSubmit={this.onFormSubmit} className="">
+            <div className="form-group">
+              <label className="text-center">Podaj nazwę miasta</label>
+              <input
+                type="text"
+                name="city"
+                value={this.state.city}
+                placeholder="Warszawa"
+                onChange={this.onInputChange}
+                maxLength="15"
+                className="form-control"
+              />
+            </div>
+            <div className="form-group">
+              <label className="text-center">Podaj kod kraju</label>
+              <input
+                type="text"
+                name="code"
+                value={this.state.code}
+                placeholder="PL"
+                onChange={this.onInputChange}
+                maxLength="2"
+                className="form-control"
+              />
+            </div>
+          <button type="submit" className="btn btn-secondary">
+              Pobierz dane
+            </button>
         </form>
-        {this.state.isCityValid === false &&
-          this.state.isCodeValid === false && (
-            <p style={{ color: 'red', fontWeight: 'bold' }}>
-              Upewnij się, że wprowadziłeś poprawne dane!
-            </p>
-          )}
       </>
     );
   }
