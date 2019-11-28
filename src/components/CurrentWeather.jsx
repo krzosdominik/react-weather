@@ -29,7 +29,13 @@ const CurrentWeather = () => {
   }
 
   if (!weather) {
-    return null;
+    return (
+      <div className="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Ładowanie danych...</span>
+        </div>
+      </div>
+    );
   }
 
   return (
