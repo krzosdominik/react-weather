@@ -1,7 +1,8 @@
 # react-weather
 Projekt zaliczeniowy z wykorzystaniem React
 =======
-Aplikacja dostępna pod adresem -> https://awesome-feynman-2bc759.netlify.com/
+Aplikacja dostępna pod adresem -> 
+https://awesome-feynman-2bc759.netlify.com/
 ---------------------------------------------------------------------------------------------------
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
