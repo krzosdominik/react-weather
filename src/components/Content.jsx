@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import CurrentWeather from './CurrentWeather';
 import ForecastList from './ForecastList';
-import Search from './Search';
+import SearchForm from './SearchForm';
 import Navigation from './Navigation';
 
 const Content = () => {
@@ -11,15 +11,15 @@ const Content = () => {
     <section>
       <Switch>
         <Route exact path="/">
-          <Search />
+          <SearchForm />
         </Route>
         <Route path="/:city/:code/weather">
-          <Search />
+          <SearchForm />
           <Navigation />
           <CurrentWeather />
         </Route>
         <Route path="/:city/:code/forecast">
-          <Search />
+          <SearchForm />
           <Navigation />
           <ForecastList />
         </Route>

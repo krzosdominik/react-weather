@@ -34,7 +34,7 @@ const ForecastList = () => {
 
   if (forecastByDay) {
     return forecastByDay.map(([day, forecast]) => (
-      <div key={day}>
+      <section key={day}>
         <h1 className="badge-dark rounded text-center">
           {capitalize(
             moment(day)
@@ -45,7 +45,7 @@ const ForecastList = () => {
         {forecast.map(item => (
           <WeatherForecast key={item.dt_txt} forecast={item} city={city} />
         ))}
-      </div>
+      </section>
     ));
   }
 

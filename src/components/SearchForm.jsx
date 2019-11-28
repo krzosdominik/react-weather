@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 
-const Search = () => {
+const SearchForm = () => {
   const history = useHistory();
   const { city: cityParam, code: codeParam } = useParams();
   const [city, setCity] = useState(cityParam);
@@ -67,4 +67,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default SearchForm;
