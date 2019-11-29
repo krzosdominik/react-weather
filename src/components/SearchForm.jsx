@@ -27,7 +27,7 @@ const SearchForm = () => {
   };
 
   return (
-    <>
+    <div className='d-flex justify-content-center text-center'>
       <form onSubmit={onSubmit}>
         <div className="form-group">
           <label className="text-center">Podaj nazwę miasta</label>
@@ -63,7 +63,7 @@ const SearchForm = () => {
           aplikacji!
         </div>
       )}
-    </>
+    </div>
   );
 };
 
