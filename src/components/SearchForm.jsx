@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const SearchForm = () => {
   const history = useHistory();
-  const { city: cityParam, code: codeParam } = useParams();
-  const [city, setCity] = useState(cityParam);
-  const [code, setCode] = useState(codeParam);
+  const [city, setCity] = useState('');
+  const [code, setCode] = useState('');
   const [isValid, setValid] = useState(true);
 
   const onCityChange = e => {
@@ -27,7 +26,7 @@ const SearchForm = () => {
   };
 
   return (
-    <div className='d-flex justify-content-center text-center'>
+    <div className='text-center'>
       <form onSubmit={onSubmit}>
         <div className="form-group">
           <label className="text-center">Podaj nazwę miasta</label>
