@@ -1,9 +1,10 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
+import Header from './Header';
 import CurrentWeather from './CurrentWeather';
 import ForecastList from './ForecastList';
-import SearchForm from './SearchForm';
+import Jumbotron from './Jumbotron';
 import Navigation from './Navigation';
 
 const Content = () => {
@@ -11,17 +12,24 @@ const Content = () => {
     <section>
       <Switch>
         <Route exact path="/">
-          <SearchForm />
+          <Header formVisible={false} />
+          <div className="container">
+            <Jumbotron />
+          </div>
         </Route>
         <Route path="/:city/:code/weather">
-          <SearchForm />
-          <Navigation />
-          <CurrentWeather />
+          <Header formVisible={true} />
+          <div className="container">
+            <Navigation />
+            <CurrentWeather />
+          </div>
         </Route>
         <Route path="/:city/:code/forecast">
-          <SearchForm />
-          <Navigation />
-          <ForecastList />
+          <Header formVisible={true} />
+          <div className="container">
+            <Navigation />
+            <ForecastList />
+          </div>
         </Route>
       </Switch>
     </section>

@@ -26,33 +26,40 @@ const SearchForm = () => {
   };
 
   return (
-    <div className='text-center'>
-      <form onSubmit={onSubmit}>
-        <div className="form-group">
-          <label className="text-center">Podaj nazwę miasta</label>
+    <div className="text-center">
+      <form
+        onSubmit={onSubmit}
+        class="form-inline d-flex justify-content-center"
+      >
+        <div className="form-group mb-2">
           <input
             type="text"
             name="city"
             value={city}
-            placeholder="Nazwa miasta"
+            placeholder="Podaj nazwę miasta"
             onChange={onCityChange}
             maxLength="15"
             className="form-control"
+            style={{ marginLeft: '10px' }}
           />
         </div>
-        <div className="form-group">
-          <label className="text-center">Podaj kod kraju</label>
+        <div className="form-group mb-2">
           <input
             type="text"
             name="code"
             value={code}
-            placeholder="Kod kraju, np. pl"
+            placeholder="Podaj kod kraju, np. pl"
             onChange={onCodeChange}
             maxLength="5"
             className="form-control"
+            style={{ marginLeft: '10px' }}
           />
         </div>
-        <button type="submit" className="btn btn-secondary">
+        <button
+          type="submit"
+          className="btn btn-info mb-2"
+          style={{ marginLeft: '10px' }}
+        >
           Pobierz dane
         </button>
       </form>
