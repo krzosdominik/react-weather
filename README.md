@@ -1,4 +1,3 @@
-# react-weather
 Aplikacja "Pogodynka" napisana przy użyciu bibliteki React
 =======
 Aplikacja dostępna pod adresem -> 
